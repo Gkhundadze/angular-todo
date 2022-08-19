@@ -1,0 +1,45 @@
+$padding-20: 20px;
+$padding-10: 10px;
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $padding-20 0;
+    background-color: #333;
+    color: #fff;
+}
+.main{
+    .input-wrapper {
+        padding: $padding-20 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input, button {
+            padding: $padding-10 0;
+            font-size: 1.2rem;
+            border-radius: 10px;
+        }
+    }
+    .todos-wrapper{
+        display: flex;
+        justify-content: center;
+        .todo {
+            min-width: 400px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(168, 53, 53);
+            padding: $padding-10 $padding-20;
+            border-radius: $padding-10;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            input{
+                transform: scale(1.5);
+            }
+            button{
+                padding: 1px 5px;
+                border-radius: 5px;
+            }
+        }
+    }
+}
