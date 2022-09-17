@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <form action="#">
+        <input class="input" type="text" (keyup)="onInputChange($event)" required>
+        <button class="search-button" (click)="onSubmit(defaultCity)">search</button>
+    </form>
+    <div class="weather-card">
+        <div *ngIf="!weatherData" class="loading-state">loading data ...</div>
+        <div class="title">
+            <img [src]="iconUrl" alt="">
+            <h3>{{cityName}}</h3>
+        </div>
+        <div class="body">
+            <p *ngIf="countryName">Country : {{countryName}}</p>
+
+        </div>
+        <div class="footer">
+            <div>
+                <span *ngIf="updatedTime">Last updated :</span><span> {{updatedTime}}</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<a class="back-button" routerLink="/">back</a>

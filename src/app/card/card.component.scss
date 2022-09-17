@@ -1,0 +1,35 @@
+.cards-container {
+    background-color: #7e0404;
+    padding-top: 3rem;
+    color: #ccc;
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 3%;
+    }
+    .grid .card-wrapper {
+        text-align: center;
+        margin: 20px 0;
+        position: relative;
+        cursor: pointer;
+        .card-id {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: red;
+            font-weight: bold;
+        }
+        .image-content {
+            transition: box-shadow .4s;
+            :hover {
+                transition-duration: .4s;
+                box-shadow: 0px 0px 15px 2px #333;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    
+    }
+}

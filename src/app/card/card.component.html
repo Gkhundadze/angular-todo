@@ -1,0 +1,13 @@
+<div class="cards-container">
+    <div class="grid">
+        <div class="card-wrapper" *ngFor = "let card of cardData; index as i">  
+            <div class="image-content">
+                <img src={{card.cardImageUrl}} alt=""> 
+            </div>
+            <h2>{{card.cardTitle}}</h2>
+            <p>{{card.cardDescription}}</p>
+            <span class="card-id">ID : {{i}}</span>
+        </div>
+    </div>
+</div>
+<a class="back-button" routerLink = "/">back</a>

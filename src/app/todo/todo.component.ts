@@ -1,14 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TodoApiService } from '../todo-api.service';
-
 @Component({
-  selector: 'app-welcome',
-  templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.scss']
+  selector: 'app-todo',
+  templateUrl: './todo.component.html',
+  styleUrls: ['./todo.component.scss']
 })
-export class WelcomeComponent implements OnInit {
+export class TodoComponent implements OnInit {
   public test:any = 0;
-  public todos:any = []
+  public todos:any
   constructor(private apiCall:TodoApiService) { }
 
   public username: string = '';
@@ -44,5 +43,4 @@ export class WelcomeComponent implements OnInit {
   oncheckboxChange(){
 
   }
-
 }

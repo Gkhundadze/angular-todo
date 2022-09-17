@@ -1,17 +1,13 @@
-<div class="header">
-    <h1>ToDo List</h1>
-</div>
-<div class="main">
-    <div class="input-wrapper">
-            <input type="text" id="username" name="username" [(ngModel)]="username">
-
-        <button type="button" (click)="clickme()">Clickme</button>
-    </div>
-    <div class="todos-wrapper" *ngFor="let todo of todos; index as i">
-        <div class="todo">
-            <input type="checkbox">
-            <p>{{todo}}</p>
-            <button (click)="delete(i)">x</button>
-        </div>
-    </div>
-</div>
+<nav class="app-navigation">
+    <ul class="navigation-wrapper">
+        <li class="navigation-item">
+            <a routerLink="/todo" class="navigation-link">todo app</a>
+        </li>
+        <li class="navigation-item">
+            <a routerLink="/weather" class="navigation-link">weather app</a>
+        </li>
+        <li class="navigation-item">
+            <a routerLink="/cards" class="navigation-link">cards app</a>
+        </li>
+    </ul>
+</nav>

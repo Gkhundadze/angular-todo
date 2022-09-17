@@ -1,0 +1,24 @@
+<div class="header">
+    <h1>ToDo List</h1>
+    <h2>{{test}}</h2>
+</div>
+<div class="main">
+    <div class="input-wrapper">
+            <input type="text" id="username" name="username" [(ngModel)]="username">
+
+        <button type="button" (click)="clickme()">Clickme</button>
+    </div>
+    <ng-container *ngIf="!todos">
+        <img class="loader-image" src="../../assets/images/gif/loading.gif" alt="">
+    </ng-container>
+    <ng-container>
+        <div class="todos-wrapper" *ngFor="let todo of todos; index as i">
+        <div class="todo" [class.checked]="todo.completed">
+            <input  type="checkbox" [checked]="todo.completed">
+            <p>{{todo.text}} id : <span>{{i + 1}}</span></p>
+            <button class="delete-buton" (click)="delete(i)">x</button>
+        </div>
+    </div>
+    </ng-container>
+</div>
+<a class="back-button" routerLink = "/">back</a>
